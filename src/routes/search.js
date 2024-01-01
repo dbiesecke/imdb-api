@@ -21,7 +21,8 @@ search.get("/", async (c) => {
     data.d.forEach((node) => {
       try {
         if (!node.qid) return;
-        if (!["movie", "tvSeries", "tvMovie"].includes(node.qid)) return;
+        // if (!["movie", "tvSeries", "tvMovie"].includes(node.qid)) return;
+        if (!["movie"].includes(node.qid)) return;
 
         let imageObj = {
           image: null,
